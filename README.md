@@ -81,15 +81,12 @@ is off by default.
         └── app.js          Scanning, filters, cards, CSV download
 
 ## Webpage Interface
-<img width="1296" height="615" alt="Screenshot 2026-10-19 224252" src="https://github.com/user-attachments/assets/3cf9828d-7f70-4293-9e60-7bfb4e532cfa" />
 
-<img width="1271" height="890" alt="Screenshot 2026-10-19 224356" src="https://github.com/user-attachments/assets/670c2e2c-f84e-4c40-b839-7f16875ae8ca" />
-
-<img width="1176" height="905" alt="Screenshot 2026-10-19 224601" src="https://github.com/user-attachments/assets/792315e6-cfca-4463-a3af-99257b79eecf" />
-
-<img width="1170" height="827" alt="Screenshot 2026-10-19 224640" src="https://github.com/user-attachments/assets/88f85fa9-2724-48cb-8081-e0f4358f5595" />
-
-<img width="1190" height="887" alt="Screenshot 2026-10-19 224708" src="https://github.com/user-attachments/assets/45e829c3-6e66-4b6b-991f-b6dca24e3fd1" />
+<img width="1296" height="615" alt="Screenshot 2026-10-19 224252" src="https://github.com/user-attachments/assets/681dfcf1-a28c-443f-ab9a-eb21d27b87b6" />
+<img width="1271" height="890" alt="Screenshot 2026-10-19 224356" src="https://github.com/user-attachments/assets/51d84544-7fdf-4581-a695-0bed19432319" />
+<img width="1176" height="905" alt="Screenshot 2026-10-19 224601" src="https://github.com/user-attachments/assets/5a80cd2e-6b4f-4e41-b81f-9d5d5dd93172" />
+<img width="1170" height="827" alt="Screenshot 2026-10-19 224640" src="https://github.com/user-attachments/assets/f7cf9806-66d2-48c6-a287-f092c988b0ed" />
+<img width="1190" height="887" alt="Screenshot 2026-10-19 224708" src="https://github.com/user-attachments/assets/486548d1-2c5b-4959-b069-9d3f38aa79e5" />
 
 ## How it works
 
