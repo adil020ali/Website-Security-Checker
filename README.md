@@ -8,7 +8,7 @@ security headers, then suggests how to improve anything that is missing.
 > This is a learning project, not a full vulnerability scanner.
 
 ## Live Demo
-Try it here:https://website-security-checker-appw.onrender.com
+Try it here: https://website-security-checker-appw.onrender.com
 >This app runs on a free hosting plan....
 
 ## What it checks
