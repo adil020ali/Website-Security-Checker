@@ -7,6 +7,10 @@ security headers, then suggests how to improve anything that is missing.
 > **Use it only on websites you own or have permission to test.**
 > This is a learning project, not a full vulnerability scanner.
 
+## Live Demo
+Try it here:https://website-security-checker-appw.onrender.com
+>This app runs on a free hosting plan....
+
 ## What it checks
 
 - **HTTPS connection:** a request with certificate and hostname verification on
