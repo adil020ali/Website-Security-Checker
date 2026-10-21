@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Security Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+        <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Website Security Checker</span>
+    </div>
+    <button id="theme" class="icon-btn" type="button" aria-label="Switch light or dark theme">Theme</button>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Is this site set up safely?</h1>
+      <p class="lead">Scan a public HTTPS address for its certificate, redirects and security headers.</p>
+
+      <form id="scan-form" novalidate>
+        <label for="url">Website address</label>
+        <div class="row">
+          <input type="url" id="url" name="url" placeholder="https://example.com"
+                 autocomplete="off" spellcheck="false" required>
+          <button type="submit" id="scan-btn" class="primary">Scan website</button>
+        </div>
+        <p class="hint">Only scan sites you own or have permission to assess.</p>
+      </form>
+
+      <div id="recent" class="recent" hidden>
+        <span class="recent-label">Recent scans</span>
+        <div id="recent-list" class="chips"></div>
+        <button id="clear-recent" class="link-btn" type="button">Clear</button>
+      </div>
+    </section>
+
+    <section id="loading" class="loading" hidden aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p id="loading-text">Starting scan…</p>
+      <ol id="loading-steps" class="steps"></ol>
+    </section>
+
+    <section id="error" class="error" role="alert" hidden>
+      <h2>Scan failed</h2>
+      <p id="error-text"></p>
+    </section>
+
+    <section id="report" class="report" hidden aria-labelledby="report-title">
+      <div class="report-head">
+        <div class="gauge-wrap">
+          <svg id="gauge" class="gauge" viewBox="0 0 120 120" role="img" aria-label="Configuration score">
+            <circle class="gauge-track" cx="60" cy="60" r="52"/>
+            <circle id="gauge-arc" class="gauge-arc" cx="60" cy="60" r="52" transform="rotate(-90 60 60)"/>
+          </svg>
+          <div class="gauge-num"><strong id="score">0</strong><span>of 100</span></div>
+        </div>
+        <div class="report-title">
+          <h2 id="report-title"></h2>
+          <p id="report-meta" class="meta"></p>
+          <p class="meta">Score = share of checks passed. It is a snapshot, not a verdict.</p>
+          <div class="actions">
+            <button id="csv" type="button" class="secondary">Download CSV</button>
+            <button id="rescan" type="button" class="secondary">Scan again</button>
+          </div>
+        </div>
+      </div>
+
+      <dl id="cert" class="cert" hidden></dl>
+
+      <div class="toolbar">
+        <div id="filters" class="filters" role="group" aria-label="Filter results"></div>
+        <div class="toggles">
+          <button id="expand" type="button" class="link-btn">Expand all</button>
+          <button id="collapse" type="button" class="link-btn">Collapse all</button>
+        </div>
+      </div>
+
+      <ul id="results" class="results"></ul>
+
+      <p class="note">A missing header is an observation, not proof of a vulnerability.
+      The right settings depend on the site.</p>
+    </section>
+  </main>
+</body>
+</html>
